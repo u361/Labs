@@ -58,7 +58,6 @@ public class Testing {
 
         System.out.println(Arrays.toString(sortedArray));
         System.out.println("Отсортировано " + array.length + " элементов за " + (endTime-startTime) + " мс.");
-        //test
     }
 
 
