@@ -1,3 +1,5 @@
+package Ex1;
+
 import java.util.Random;
 
 public class Ex1 {
