@@ -3,7 +3,7 @@ package Ex1;
 import java.util.Random;
 
 public class Ex1 {
-    public static void main(String... Args) {
+    public static void main(String[] args) {
         System.out.println("Реализовать класс для работы с битовыми строками длины 128 бит. Должны быть реализованы\n" +
                 "основные поразрядные логические операции со строками (и, или, не, исключающее или).\n" +
                 "Также должны быть методы для установки и сброса определенных битов (по номеру бита), методы для\n" +

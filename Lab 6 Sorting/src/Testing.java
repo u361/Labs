@@ -1,3 +1,4 @@
+import TreeSort.TreeSort;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Random;
@@ -5,7 +6,7 @@ import java.util.Random;
 public class Testing {
     public static void main(String[] args) {
         System.out.println("1 - StupidSort, 2 - BubbleSort, 3 - ShakerSort, 4 - InsertionSort, 5 - SelectionSort\n" +
-                "6 - MergeSort, 7 - QuickSort, 8 - CountSort, 9 - RadixSort, 10 - ArraysSort");
+                "6 - MergeSort, 7 - QuickSort, 8 - CountSort, 9 - RadixSort, 10 - TreeSort.TreeSort, 12 - ArraysSort");
 
         System.out.print("Выберете тип сортировки: ");
         Scanner scanner = new Scanner(System.in);
@@ -50,6 +51,9 @@ public class Testing {
                 sortedArray = RadixSort.sort(array);
                 break;
             case (10):
+                sortedArray = TreeSort.sort(array);
+                break;
+            case (12):
                 sortedArray = ArraysSort.sort(array);
                 break;
         }
