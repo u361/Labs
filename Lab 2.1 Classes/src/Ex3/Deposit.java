@@ -1,16 +1,16 @@
 package Ex3;
 
 public class Deposit {
-    private static int lastId = 0;
+    private static int nextId = 0;
 
     private int id;
-    private double amount = 10000;
+    private double amount = 0;
     private double percent;
     private int period;
     private int timeLeft;
 
     public Deposit(double percent, int period) {
-        this.id = ++lastId;
+        this.id = nextId++;
         this.percent = percent;
         this.period = period;
         this.timeLeft = period;
@@ -46,12 +46,18 @@ public class Deposit {
         }
     }
 
-    public void depositMoney (double amount) {
+    public void depositMoney (String name, double amount) {
         this.amount += amount;
+        System.out.println("Депозит с id: " + id + " клиента " + name + " пополнен на " + amount);
     }
 
-    public double withdrawMoney(double amount) {
-        this.amount -= amount;
-        return amount;
+    public void withdrawMoney(String name, double amount) {
+        if (this.amount < amount) {
+            System.out.println("На депозите с id: " + id + " клиента " + name + " недостаточно средств!");
+        }
+        else {
+            this.amount -= amount;
+            System.out.println("С депозита с id: " + id + " клиента " + name + " снято " + amount);
+        }
     }
 }

@@ -2,17 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfc5980b-5fde-4496-b33a-c881a6cc3120" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Ex3/Bank.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ex3/Banknote.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ex3/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ex3/Deposit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ex3/Ex3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex1/Ex1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex1/Ex1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex2/ComplexNumber.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex2/ComplexNumber.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex2/Ex2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex2/Ex2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Ex1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Ex1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex2/Ex2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex2/Ex2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex3/Bank.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex3/Bank.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex3/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex3/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex3/Deposit.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex3/Deposit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex3/Ex3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Lab 2.1 Classes/Ex3/Ex3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex3/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex3/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex3/Deposit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3/Deposit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex3/Ex3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex3/Ex3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +37,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunManager" selected="Application.Ex3">
     <configuration name="Ex1 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -126,26 +125,34 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="614" y="110" key="CommitChangelistDialog2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1624911491898" />
-    <state width="1860" height="282" key="GridCell.Tab.0.bottom" timestamp="1625001911465">
+    <state width="1860" height="349" key="GridCell.Tab.0.bottom" timestamp="1625215754164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625001911465" />
-    <state width="1860" height="282" key="GridCell.Tab.0.center" timestamp="1625001911464">
+    <state width="1860" height="349" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625215754164" />
+    <state width="1860" height="349" key="GridCell.Tab.0.center" timestamp="1625215754164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625001911464" />
-    <state width="1860" height="282" key="GridCell.Tab.0.left" timestamp="1625001911464">
+    <state width="1860" height="349" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625215754164" />
+    <state width="1860" height="349" key="GridCell.Tab.0.left" timestamp="1625215754164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625001911464" />
-    <state width="1860" height="282" key="GridCell.Tab.0.right" timestamp="1625001911464">
+    <state width="1860" height="349" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625215754164" />
+    <state width="1860" height="349" key="GridCell.Tab.0.right" timestamp="1625215754164">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625001911464" />
+    <state width="1860" height="349" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625215754164" />
+    <state x="461" y="161" key="SettingsEditor" timestamp="1625178734984">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="161" key="SettingsEditor/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625178734984" />
     <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1624911502422">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1624911502422" />
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup" timestamp="1625172835729">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" width="672" height="677" key="run.anything.popup/0.0.1920.1040/1920.0.1280.984@0.0.1920.1040" timestamp="1625172835729" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1624797159080">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
