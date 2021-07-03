@@ -1,4 +1,4 @@
-import TreeSort.TreeSort;
+import TreeSortPackage.TreeSort;
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.Random;
@@ -51,7 +51,7 @@ public class Testing {
                 sortedArray = RadixSort.sort(array);
                 break;
             case (10):
-                sortedArray = TreeSort.sort(array);
+                sortedArray = TreeSortPackage.TreeSort.sort(array);
                 break;
             case (12):
                 sortedArray = ArraysSort.sort(array);

@@ -31,9 +31,21 @@ public class Client {
     }
 
     public void deleteDeposit(int id) {
-        if (this.deposits.size() > id) {
-            this.deposits.remove(id);
-            System.out.println("Депозит клиента " + name + " с id: " + id + " удален.");
+        boolean found = false;
+        for (Deposit deposit : deposits) {
+            if (deposit.getId() == id) {
+                found = true;
+                break;
+            }
+        }
+
+        if (found) {
+            if (this.withdrawMoney((int)this.deposits.get(id).getAmount(), false, id)) {
+                this.deposits.remove(id);
+                System.out.println("Депозит клиента " + name + " с id: " + id + " удален.");
+            }
+            else
+                System.out.println("Депозит клиента " + name + " с id: " + id + " не удален.");
         }
         else
             System.out.println("Депозит клиента " + name + " с id: " + id + " для удаления не найден!");
@@ -56,49 +68,67 @@ public class Client {
         }
     }
 
-    public void withdrawMoney(int amount) {
+    public boolean withdrawMoney(int amount, boolean randomDeposit, int depositForDelete) {
         if (this.deposits.size() > 0) {
-            Random random = new Random();
-            int[] denominations = Bank.getDenominations();
-
-            int amountCheck = amount;
-            boolean enoughMoney = true;
-            for (int i = denominations.length - 1; i >= 0; i--) {
-                System.out.println("Остаток: " + amountCheck);
-                System.out.println("Номинал купюры: " + denominations[i]);
-                System.out.println("    Надо: " + amountCheck / denominations[i]);
-                System.out.println("    В банке: " + bank.countBanknotes(denominations[i]));
-
-                if(amountCheck / denominations[i] > bank.countBanknotes(denominations[i])) {
-                    enoughMoney = false;
-                }
-                else {
-                    System.out.println("    Достаточно");
-                }
-
-                amountCheck %= denominations[i];
-            }
-
-            if (enoughMoney) {
-                int test = 0;
-                int depositId = random.nextInt(deposits.size());
-                deposits.get(depositId).withdrawMoney(name, amount);
-                for (int i = denominations.length - 1; i >= 0; i--) {
-                    while (amount / denominations[i] > 0) {
-                        amount -= denominations[i];
-                        System.out.println("Удаляем " + denominations[i]);
-                        bank.deleteBanknote(denominations[i]);
-                        test += denominations[i];
-                    }
-                }
-                System.out.println("Test: " + test);
+            int depositId;
+            if (randomDeposit) {
+                Random random = new Random();
+                depositId = random.nextInt(deposits.size());
             }
             else {
-                System.out.println("В банке " + bank.getName() + " недостаточно купюр для снятия " + amount + " клиентом " + name);
+                depositId = depositForDelete;
             }
+
+            if (deposits.get(depositId).getAmount() >= amount) {
+                int[] denominations = Bank.getDenominations();
+
+                int amountCheck = amount;
+                boolean enoughMoney = true;
+                for (int i = denominations.length - 1; i >= 0; i--) {
+                    //System.out.println("Остаток: " + amountCheck);
+                    //System.out.println("Номинал купюры: " + denominations[i]);
+                    //System.out.println("    Надо: " + amountCheck / denominations[i]);
+                    //System.out.println("    В банке: " + bank.countBanknotes(denominations[i]));
+
+                    if (amountCheck / denominations[i] > bank.countBanknotes(denominations[i])) {
+                        enoughMoney = false;
+                    } else {
+                        //System.out.println("    Достаточно");
+                    }
+
+                    amountCheck %= denominations[i];
+                }
+
+                if (enoughMoney) {
+                    int test = 0;
+
+                    deposits.get(depositId).withdrawMoney(name, amount);
+                    for (int i = denominations.length - 1; i >= 0; i--) {
+                        while (amount / denominations[i] > 0) {
+                            amount -= denominations[i];
+                            //System.out.println("Удаляем " + denominations[i]);
+                            bank.deleteBanknote(denominations[i]);
+                            test += denominations[i];
+                        }
+                    }
+
+                    return true;
+                }
+                else {
+                    System.out.println("В банке " + bank.getName() + " недостаточно купюр для снятия " + amount + " клиентом " + name);
+
+                    return false;
+                }
+            }
+            System.out.println("На счету с id: " + deposits.get(depositId).getId() + " недостаточно средств для снятия " + amount + " клиентом " + name);
+            //System.out.println("                                                                                    Проверка не прошла!!!!!!!!!!!!!");
+
+            return false;
         }
         else {
             System.out.println("У клиента " + name + " нет депозитов для снятия средств.");
+
+            return false;
         }
     }
 
@@ -130,7 +160,7 @@ public class Client {
                 this.deleteDeposit(random.nextInt(5));
                 break;
             case 2:
-                this.withdrawMoney(random.nextInt(10000));
+                this.withdrawMoney(random.nextInt(10000), true, 0);
                 break;
             case 3:
                 this.depositMoney(random.nextInt(10000));

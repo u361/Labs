@@ -12,8 +12,8 @@ public class Ex3 {
 
         Bank bank = new Bank("Shemyak Financial Group", new int[]{0, 0, 0, 0, 0, 0, 0});
 
-        bank.addClient(new Client("Дедик", bank));
-        bank.addClient(new Client("Бина", bank));
+        bank.addClient(new Client("Валера", bank));
+        bank.addClient(new Client("Саня", bank));
 
         System.out.println("Список клиентов банка " + bank.getName() + ": ");
         bank.showAllClients();
