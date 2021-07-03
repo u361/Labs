@@ -1,7 +1,9 @@
 package TreeSortPackage;
 
 public class Tree {
-    Node node;
+    private Node node;
+    private int[] array;
+    private int orderCounter;
 
     public Tree() {
         this.node = null;
@@ -15,10 +17,10 @@ public class Tree {
         }
 
         if (value < node.getValue()) {
-            node.leftNode = insertNode(node.leftNode, value);
+            node.setLeftNode(insertNode(node.getLeftNode(), value));
         }
         else {
-            node.rightNode = insertNode(node.rightNode, value);
+            node.setRightNode(insertNode(node.getRightNode(), value));
         }
 
         return node;
@@ -28,11 +30,29 @@ public class Tree {
         this.node = insertNode(this.node, value);
     }
 
+    public void insertArray(int[] array) {
+        for (int value : array) {
+            insertValue(value);
+        }
+
+        this.array = array;
+        this.orderCounter = 0;
+    }
+
     public void inOrder(Node node) {
         if (node != null) {
-            inOrder(node.leftNode);
-            System.out.println(node.getValue());
-            inOrder(node.rightNode);
+            inOrder(node.getLeftNode());
+            array[orderCounter] = node.getValue();
+            orderCounter++;
+            inOrder(node.getRightNode());
         }
     }
+
+    public int[] getSortedArray() {
+        inOrder(this.node);
+
+        return array;
+    }
+
+
 }

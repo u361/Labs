@@ -2,8 +2,8 @@ package TreeSortPackage;
 
 public class Node {
     private int value;
-    Node leftNode;
-    Node rightNode;
+    private Node leftNode;
+    private Node rightNode;
 
     public Node (int value) {
         this.value = value;
